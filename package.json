@@ -4,6 +4,7 @@
   "description": "Interface for our rljson-ish databases.",
   "main": "dist/gg-db.cjs.js",
   "module": "dist/gg-db.es.js",
+  "umd": "dist/gg-db.umd.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"

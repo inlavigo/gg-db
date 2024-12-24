@@ -5,13 +5,12 @@
 // found in the LICENSE file in the root of this package.
 import { describe, expect, it } from 'vitest';
 
-import { exampleGgDbFilterItem } from './gg-db-filter-item';
+import { exampleGgDbQuery } from '../src/gg-db-query';
 
-
-describe('GgDbFilterItem', () => {
-  describe('exampleGgDbFilterItem', () => {
+describe('GgDbQuery', () => {
+  describe('exampleGgDbQuery', () => {
     it('should be defined', () => {
-      expect(exampleGgDbFilterItem).toBeDefined();
+      expect(exampleGgDbQuery).toBeDefined();
     });
   });
 });

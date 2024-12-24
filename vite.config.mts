@@ -7,6 +7,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'gg-db',
       fileName: (format) => `gg-db.${format}.js`,
+      formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
       output: {
