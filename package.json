@@ -2,12 +2,19 @@
   "name": "gg-db",
   "version": "0.0.1",
   "description": "Interface for our rljson-ish databases.",
-  "main": "dist/gg-db.cjs.js",
+  "license": "MIT",
+  "author": "Dr. Gabriel Gatzsche",
+  "main": "dist/gg-db.js",
   "module": "dist/gg-db.es.js",
   "umd": "dist/gg-db.umd.js",
+  "cjs": "dist/gg-db.cjs.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "example/src",
+    "example/package.json",
+    "example/tsconfig.json",
+    "example/README.md"
   ],
   "type": "module",
   "scripts": {
@@ -17,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inlavigo/gg-db.git"
+    "url": "git+https://github.com/inlavigo/gg-db-js.git"
   },
   "keywords": [
     "gg",
@@ -25,18 +32,16 @@
     "db",
     "SQL"
   ],
-  "author": "Dr. Gabriel Gatzsche",
-  "license": "MIT",
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.12",
     "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "^2.1.8",
-    "jsdom": "^25.0.1",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8",
     "vitest-dom": "^0.1.1",
     "vitest-fetch-mock": "^0.4.3"
-  }
+  },
+  "dependencies": {}
 }

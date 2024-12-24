@@ -1,0 +1,21 @@
+{
+  "name": "gg-db-example",
+  "version": "1.0.0",
+  "main": "gg-db-example.js",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "chmod +x dist/gg-db-example.js"
+  },
+  "bin": {
+    "gg-db-example": "dist/gg-db-example.js"
+  },
+  "author": "Dr. Gabriel Gatzsche",
+  "license": "MIT",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "gg-db": "..",
+    "typescript": "^5.7.2",
+    "vite-node": "^2.1.8"
+  }
+}
