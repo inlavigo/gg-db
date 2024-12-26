@@ -43,5 +43,8 @@
     "vitest-dom": "^0.1.1",
     "vitest-fetch-mock": "^0.4.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gg-json-hash": "^2.1.6",
+    "rljson": "^4.1.2"
+  }
 }

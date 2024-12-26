@@ -4,6 +4,5 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-import { MockGgDb } from './gg-db';
-
-export { MockGgDb };
+export type { GgDb } from './gg-db';
+export { GgDbMock } from './gg-db-mock';

@@ -6,22 +6,15 @@
 
 import { describe, expect, test } from 'vitest';
 
-import { MockGgDb } from '../src/gg-db';
+import { exampleGgDb } from '../src/gg-db';
+import { GgDbMock } from '../src/gg-db-mock';
 
 describe('GgDb', () => {
-  const ggDb = MockGgDb.example;
+  const ggDb = GgDbMock.example;
 
-  describe('MockGgDb', () => {
-    describe('get', () => {
-      test('returns the mocked getResult', async () => {
-        const result = await ggDb.get({
-          columns: [
-            { table: 'addresses', column: 'id', dataType: 'string' },
-            { table: 'addresses', column: 'name', dataType: 'string' },
-          ],
-        });
-        expect(result).toEqual({ rows: MockGgDb.exampleGetResult });
-      });
+  describe('exampleGgDb', () => {
+    test('is a GgDbMock', () => {
+      expect(exampleGgDb).instanceOf(GgDbMock);
     });
   });
 });
