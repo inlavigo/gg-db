@@ -11,18 +11,13 @@ npm run test
 
 ## Publish the package
 
-Open `package.json`.
+Open `package.json` and increase `version`.
 
-Increase `version`.
-
-Compile typescript:
+Build, test and publish:
 
 ```bash
-npm run build
-```
-
-Make publish dry-run
-
-```bash
-npm publish --dry-run
+npm run build # No build errors?
+npm run test # No tests are failing? 100% coverage?
+npm publish --dry-run # No unwanted files published?
+npm publish
 ```
