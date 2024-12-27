@@ -1,5 +1,5 @@
 {
-  "name": "gg-db",
+  "name": "gg-db-js",
   "version": "0.0.1",
   "description": "Interface for our rljson-ish databases.",
   "license": "MIT",
