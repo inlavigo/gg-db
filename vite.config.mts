@@ -1,18 +1,19 @@
 // vite.config.ts
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+  plugins: [dts({ include: ['lib/*'] })],
+
   build: {
+    copyPublicDir: false,
     lib: {
-      entry: 'lib/index.ts',
-      name: 'gg-db',
-      fileName: (format) => `gg-db.${format}.js`,
-      formats: ['es', 'cjs', 'umd'],
+      entry: resolve(__dirname, 'lib/index.ts'),
+      formats: ['es'],
     },
     rollupOptions: {
-      output: {
-        globals: {},
-      },
+      external: ['gg-json-hash', 'rljson'],
     },
   },
 });

@@ -1,14 +1,11 @@
 {
   "name": "gg-db-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Interface for our rljson-ish databases.",
   "license": "MIT",
   "author": "Dr. Gabriel Gatzsche",
-  "main": "dist/gg-db.js",
-  "module": "dist/gg-db.es.js",
-  "umd": "dist/gg-db.umd.js",
-  "cjs": "dist/gg-db.cjs.js",
-  "types": "dist/types/index.d.ts",
+  "main": "dist/gg-db-js.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -16,7 +13,8 @@
   "scripts": {
     "build": "tsc --p ./tsconfig-build.json && vite build",
     "prepare": "npm run build",
-    "test": "npx vitest run --coverage"
+    "test": "npx vitest run --coverage",
+    "prepublishOnly": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -34,12 +32,13 @@
     "@vitest/coverage-v8": "^2.1.8",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.4.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8",
     "vitest-dom": "^0.1.1",
     "vitest-fetch-mock": "^0.4.3"
   },
-  "dependencies": {
+  "peerDependencies": {
     "gg-json-hash": "^2.1.6",
     "rljson": "^4.1.2"
   }

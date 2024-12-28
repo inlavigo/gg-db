@@ -4,5 +4,7 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-export { GgDb } from './gg-db';
-export { GgDbMock } from './gg-db-mock';
+export * from './gg-db';
+export * from './gg-db-mock';
+export * from './gg-db-query';
+export * from './gg-db-result-set';
