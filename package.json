@@ -1,6 +1,6 @@
 {
   "name": "gg-db-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Interface for our rljson-ish databases.",
   "license": "MIT",
   "author": "Dr. Gabriel Gatzsche",

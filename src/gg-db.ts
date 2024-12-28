@@ -13,12 +13,22 @@ import { GgDbResultSet } from './gg-db-result-set';
 // #############################################################################
 /// Allows to access data
 
-export interface GgDb {
+export abstract class GgDb {
   /// Get selected and filtered columns from the database
-  get(query: GgDbQuery): Promise<GgDbResultSet>;
+
+  abstract get(query: GgDbQuery): Promise<GgDbResultSet>;
 
   /// Import data from an rljson data structure
-  import(rljson: Rljson): Promise<void>;
+  abstract import(request: GgDbImportRequest): Promise<GgDbImportResponse>;
+
+  /// Example instance of GgDB
+  static get example() {
+    return GgDbMock.example;
+  }
 }
 
-export const exampleGgDb: GgDb = GgDbMock.example;
+// .............................................................................
+export interface GgDbImportRequest {
+  rljson: Rljson;
+}
+export interface GgDbImportResponse {}

@@ -7,16 +7,17 @@
 import { JsonHash } from 'gg-json-hash';
 import { Rljson } from 'rljson';
 
-import { GgDb } from './gg-db';
+import { GgDb, GgDbImportRequest, GgDbImportResponse } from './gg-db';
 import { GgDbQuery } from './gg-db-query';
 import { GgDbResultSet } from './gg-db-result-set';
 
 // #############################################################################
 export class GgDbMock implements GgDb {
   constructor() {}
-  async import(rljson: Rljson): Promise<void> {
-    const data = JsonHash.default.apply(rljson.originalData);
+  async import(request: GgDbImportRequest): Promise<GgDbImportResponse> {
+    const data = JsonHash.default.apply(request.rljson.originalData);
     this.rljson = this.rljson.addData(data);
+    return {};
   }
 
   // ...........................................................................
@@ -35,7 +36,7 @@ export class GgDbMock implements GgDb {
   /// Returnns an example instance
   static get example(): GgDbMock {
     const result = new GgDbMock();
-    result.import(Rljson.exampleWithDeepLink);
+    result.import({ rljson: Rljson.exampleWithDeepLink });
     return result;
   }
 

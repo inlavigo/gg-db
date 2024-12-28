@@ -6,7 +6,7 @@
 
 import { describe, expect, test } from 'vitest';
 
-import { exampleGgDb } from '../src/gg-db';
+import { GgDb } from '../src/gg-db';
 import { GgDbMock } from '../src/gg-db-mock';
 
 describe('GgDb', () => {
@@ -14,7 +14,7 @@ describe('GgDb', () => {
 
   describe('exampleGgDb', () => {
     test('is a GgDbMock', () => {
-      expect(exampleGgDb).instanceOf(GgDbMock);
+      expect(GgDb.example).instanceOf(GgDbMock);
     });
   });
 });
