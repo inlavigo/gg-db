@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Distribution */
-    "rootDir": "src",
+    "rootDir": "lib",
     "outDir": "dist",
     "declarationDir": "dist/types",
     "declaration": true,
@@ -28,10 +28,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": [
-    "src/**/*.ts",
-    "../test/test-setup.ts",
-    "../test/gg-json-hash.spec.ts"
-  ],
-  "exclude": ["../test-setup.ts"]
+  "include": ["src"]
 }

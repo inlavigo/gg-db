@@ -6,8 +6,8 @@
 
 import { describe, expect, test } from 'vitest';
 
-import { GgDb } from '../src/gg-db';
-import { GgDbMock } from '../src/gg-db-mock';
+import { GgDb } from '../lib/gg-db';
+import { GgDbMock } from '../lib/gg-db-mock';
 
 describe('GgDb', () => {
   const ggDb = GgDbMock.example;

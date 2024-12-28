@@ -6,7 +6,7 @@
 
 import { describe, expect, it } from 'vitest';
 
-import { exampleGgDbColumnConfig } from '../src/gg-db-column-config';
+import { exampleGgDbColumnConfig } from '../lib/gg-db-column-config';
 
 describe('GgDbColumnConfig', () => {
   describe('exampleGgDbColumnConfig', () => {

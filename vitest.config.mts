@@ -16,8 +16,8 @@ export default defineConfig(({ mode }) => {
         enabled: true,
         provider: 'v8', // "istanbul" or "v8"
         reporter: ['text', 'json', 'html'],
-        include: ['src/**/*.ts'],
-        exclude: ['src/index.ts'],
+        include: ['lib/**/*.ts'],
+        exclude: ['lib/index.ts'],
         thresholds: {
           global: {
             statements: 100,

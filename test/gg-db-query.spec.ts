@@ -5,7 +5,7 @@
 // found in the LICENSE file in the root of this package.
 import { describe, expect, it } from 'vitest';
 
-import { exampleGgDbQuery } from '../src/gg-db-query';
+import { exampleGgDbQuery } from '../lib/gg-db-query';
 
 describe('GgDbQuery', () => {
   describe('exampleGgDbQuery', () => {

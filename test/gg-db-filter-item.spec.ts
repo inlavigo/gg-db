@@ -5,7 +5,7 @@
 // found in the LICENSE file in the root of this package.
 import { describe, expect, it } from 'vitest';
 
-import { exampleGgDbFilterItem } from '../src/gg-db-filter-item';
+import { exampleGgDbFilterItem } from '../lib/gg-db-filter-item';
 
 describe('GgDbFilterItem', () => {
   describe('exampleGgDbFilterItem', () => {

@@ -5,7 +5,7 @@
 // found in the LICENSE file in the root of this package.
 import { describe, expect, it } from 'vitest';
 
-import { exampleGgDbResultSet } from '../src/gg-db-result-set';
+import { exampleGgDbResultSet } from '../lib/gg-db-result-set';
 
 describe('GgDbResultSet', () => {
   describe('exampleGgDbResultSet', () => {

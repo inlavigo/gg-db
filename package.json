@@ -10,15 +10,11 @@
   "cjs": "dist/gg-db.cjs.js",
   "types": "dist/types/index.d.ts",
   "files": [
-    "dist",
-    "example/src",
-    "example/package.json",
-    "example/tsconfig.json",
-    "example/README.md"
+    "dist"
   ],
   "type": "module",
   "scripts": {
-    "build": "vite build && tsc",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
     "prepare": "npm run build",
     "test": "npx vitest run --coverage"
   },
